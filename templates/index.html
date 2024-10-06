@@ -4,23 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video to Frames Converter</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: #666;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        
+        /* Custom Styles */
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            margin-bottom: 10px;
+        }
+        .form-group input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .form-group select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .btn-submit {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Convert Video to Frames</h1>
-    <form action="/convert" method="POST" enctype="multipart/form-data">
-        <label for="video">Upload Video (MP4, MKV):</label>
-        <input type="file" name="video" accept=".mp4, .mkv" required><br><br>
-        
-        <label for="frame_rate">Frame Rate (24, 30, 60):</label>
-        <input type="number" name="frame_rate" min="1" max="60" value="24" required><br><br>
-        
-        <label for="output_format">Output Format (PNG, JPEG):</label>
-        <select name="output_format" required>
-            <option value="png">PNG</option>
-            <option value="jpeg">JPEG</option>
-        </select><br><br>
-        
-        <input type="submit" value="Convert">
-    </form>
+    <div class="container">
+        <h1>Convert Video to Frames</h1>
+        <form action="/convert" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="video">Upload Video (MP4, MKV):</label>
+                <input type="file" name="video" accept=".mp4, .mkv" required>
+            </div>
+            <div class="form-group">
+                <label for="frame_rate">Frame Rate (24, 30, 60):</label>
+                <input type="number" name="frame_rate" min="1" max="60" value="24" required>
+            </div>
+            <div class="form-group">
+                <label for="output_format">Output Format (PNG, JPEG):</label>
+                <select name="output_format" required>
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                </select>
+            </div>
+            <input type="submit" value="Convert" class="btn-submit">
+        </form>
+    </div>
 </body>
 </html>
