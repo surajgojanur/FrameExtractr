@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video to Frames Converter</title>
+</head>
+<body>
+    <h1>Convert Video to Frames</h1>
+    <form action="/convert" method="POST" enctype="multipart/form-data">
+        <label for="video">Upload Video (MP4, MKV):</label>
+        <input type="file" name="video" accept=".mp4, .mkv" required><br><br>
+        
+        <label for="frame_rate">Frame Rate (24, 30, 60):</label>
+        <input type="number" name="frame_rate" min="1" max="60" value="24" required><br><br>
+        
+        <label for="output_format">Output Format (PNG, JPEG):</label>
+        <select name="output_format" required>
+            <option value="png">PNG</option>
+            <option value="jpeg">JPEG</option>
+        </select><br><br>
+        
+        <input type="submit" value="Convert">
+    </form>
+</body>
+</html>
