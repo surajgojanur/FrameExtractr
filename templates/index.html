@@ -5,88 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video to Frames Converter</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap">
-    <style>
-        /* Global Styles */
+    <style>/* Global Styles */
         * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
         }
+        
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f9f9f9;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          margin: 0;
+          font-family: Open Sans, sans-serif;
+          background-color: #f7f7f7; /* light gray background */
         }
+        
         h1 {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 20px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 20px;
         }
+        
         label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 400;
-            color: #666;
+          display: block;
+          margin-bottom: 10px;
+          font-weight: 400;
+          color: #666;
         }
-        input[type="file"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-        }
-        input[type="number"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-        }
+        
+        input[type="file"],
+        input[type="number"],
         select {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 100%;
+          font-size: 16px;
         }
+        
         input[type="submit"] {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+          background-color: #337ab7; /* premium blue color */
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
         }
+        
         input[type="submit"]:hover {
-            background-color: #3e8e41;
+          background-color: #23527c; /* darker premium blue color */
         }
         
         /* Custom Styles */
         .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          max-width: 600px;
+          margin: 40px auto;
+          flex: 1;
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 10px; /* add some radius to the container */
         }
+        
         .form-group {
-            margin-bottom: 20px;
+          margin-bottom: 20px;
         }
+        
         .form-group label {
-            margin-bottom: 10px;
+          margin-bottom: 10px;
         }
-        .form-group input[type="file"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-        }
+        
+        .form-group input[type="file"],
         .form-group select {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 100%;
         }
+        
         .btn-submit {
-            display: block;
-            margin: 20px auto;
+          display: block;
+          margin: 20px auto;
+        }
+        
+        /* Footer Styles */
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 60px; /* adjust the height to your needs */
+          background-color: #337ab7; /* premium blue color */
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          clear: both;
+        }
+        
+        .footer a {
+          color: #fff;
+          text-decoration: none;
+        }
+        
+        .footer a:hover {
+          color: #ccc;
+        }
+        
+        /* Add some premium touches */
+        .container {
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-group {
+          border-bottom: 1px solid #eee;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+        }
+        
+        .form-group:last-child {
+          border-bottom: none;
+        }
+        
+        input[type="file"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+          border-color: #337ab7; /* premium blue color */
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -112,5 +157,12 @@
             <input type="submit" value="Convert" class="btn-submit">
         </form>
     </div>
-</body>
-</html>
+    <footer class="footer">
+        <p>&copy; 2024 Suraj Gojanur</p>
+        <p>
+            <a href="https://github.com/surajgojanur/FrameExtractr" target="_blank">View Source Code on GitHub      </a>
+            
+            <a href="https://www.linkedin.com/in/suraj-gojanur-3792731b5/" target="_blank">|     Connect
+            </footer>
+        </body>
+        </html>
